@@ -28,7 +28,7 @@ As a core contributor to the [HAMi open-source community](https://github.com/Pro
 
 ### 3. Intelligent Compute Scheduling & Optimization
 - Implements priority-based scheduling, preemptive task allocation, and dynamic scaling.
-- Leverages compute over-subscription to maximize GPU utilization.
+- Leverages time-slice to maximize GPU utilization.
 - Optimized for inference workloads, supporting **DeepSeek, Qwen, Llama**, and other large models.
 
 ### 4. Cloud-Native Integration
