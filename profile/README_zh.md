@@ -1,8 +1,11 @@
 [English](https://github.com/theriseunion/.github/blob/main/profile/README_zh.md) | **中文**
 
+## 睿思智联
 [北京睿思智联科技有限公司 (RiseUnion)](https://www.theriseunion.com/) 专注于构建高效、灵活的 AI 异构计算管理平台，为企业客户提供 GPU 及其他 AI 计算资源的池化、调度与优化方案。我们致力于提升 AI 计算资源的利用率，降低算力成本，并推动国产 AI 生态的发展。
 
-# HAMi
+## Project HAMi
+
+<img src="https://github.com/Project-HAMi/HAMi/raw/master/imgs/hami-horizontal-colordark.png" width="600px">
 
 HAMi 是 [Cloud Native Computing Foundation](https://cncf.io/)(CNCF) 基金会的沙箱项目和 [landscape](https://landscape.cncf.io/?item=orchestration-management--scheduling-orchestration--hami) 项目，同时也是 [CNAI Landscape 项目](https://landscape.cncf.io/?group=cnai&item=cnai--general-orchestration--hami)。
 
