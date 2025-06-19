@@ -1,53 +1,37 @@
-[English](https://github.com/theriseunion/.github/blob/main/profile/README_zh.md) | **中文**
+[English](https://github.com/theriseunion/.github/blob/main/profile/README.md) | **中文**
 
-## 睿思智联
+## 睿思智联: AI-Native 的统一智算管理平台
 [北京睿思智联科技有限公司 (RiseUnion)](https://www.theriseunion.com/) 专注于构建高效、灵活的 AI 异构计算管理平台，为企业客户提供 GPU 及其他 AI 计算资源的池化、调度与优化方案。我们致力于提升 AI 计算资源的利用率，降低算力成本，并推动国产 AI 生态的发展。
 
-## Project HAMi
+### 核心模块
 
-<img src="https://github.com/Project-HAMi/HAMi/raw/master/imgs/hami-horizontal-colordark.png" width="600px">
+* **[Rise CAMP](https://www.theriseunion.com/product/camp.html)**
+  一体化模型服务管理平台，支持大模型的推理服务与分布式训练开发。CAMP 可快速接入多种模型及推理引擎（如 vLLM、TGI、SGLang、MindIE 等），并提供版本控制、A/B 测试、流量路由、多引擎调度等精细化能力，同时支持模型广场、资源自动调度与弹性任务管理。
 
-HAMi 是 [Cloud Native Computing Foundation](https://cncf.io/)(CNCF) 基金会的沙箱项目和 [landscape](https://landscape.cncf.io/?item=orchestration-management--scheduling-orchestration--hami) 项目，同时也是 [CNAI Landscape 项目](https://landscape.cncf.io/?group=cnai&item=cnai--general-orchestration--hami)。
+* **[Rise VAST](https://www.theriseunion.com/product/vast.html)**
+  面向多租户和异构环境的 GPU 虚拟化与弹性调度层，支持精细化的算力/显存切分、超分配与动态迁移。兼容 NVIDIA、昇腾、寒武纪、海光等国产与国际加速芯片，支持 vGPU、MIG、passthrough 等多种模式。具备资源碎片整理、算力复用、热释放等高级功能。
 
-HAMi 通过 CNCF 生态加速发展，与 Kubernetes 及容器化计算平台深度集成，为 AI 计算提供云原生解决方案。
+* **[Rise ModelX](https://www.theriseunion.com/product/modelx.html)**
+  专注于模型部署、管理、服务与运维的 ModelOps 平台。ModelX 与 CAMP 和 VAST 深度集成，实现模型与算力资源的自动映射、服务上线、路由策略下发、实时监控与智能扩缩容，适配多种混合部署环境。
 
-**睿思智联** 作为 [HAMi 开源社区](https://github.com/Project-HAMi) 的核心贡献者之一，推动 HAMi 打造一个开放、灵活的异构 AI 计算虚拟化中间件，兼容多种国产及国际主流 AI 芯片，提供高效的计算资源虚拟化和智能调度能力。
+* **[Rise MAX](https://www.theriseunion.com/product/camp.html)**
+  面向企业的一体化 AI 计算解决方案，提供开箱即用的部署能力，降低 AI 应用研发与落地门槛，加速大模型商业化进程。
 
-## **HAMi 主要特性**
+### 开源生态
 
-### 1. **异构 GPU 资源池化**
-- 兼容国产 GPU（如 Ascend、沐曦、天数智芯、寒武纪、海光、摩尔线程）及 NVIDIA GPU。
-- 支持 虚拟 GPU（vGPU）、多实例（MIG）等模式，实现高效资源管理。
+我们是 [HAMi 开源项目](https://github.com/Project-HAMi/HAMi) 的核心贡献者和长期支持者。HAMi（原名 [k8s-vGPU-scheduler](https://github.com/4paradigm/k8s-vgpu-scheduler)）是 Kubernetes 上的异构设备管理中间件，可用于统一调度 GPU、NPU 等多种设备，支持设备共享、拓扑感知调度与自定义策略扩展。
 
-### 2. **跨架构统一调度**
-- 适配 x86 和 ARM 服务器架构。
-- 提供分布式调度能力，支持大规模 GPU 任务统一管理。
+睿思智联在企业场景中积极推广 vGPU 技术，持续贡献包括 vGPU 编排、算力调度、设备上报、节点管理等核心功能，并在自身产品中深度集成 HAMi，实现 GPU 生命周期的统一管理与调度优化。
 
-### 3. **智能算力调度与优化**
-- 任务优先级管理和抢占式调度。
-- 结合 time-slice 技术，提高 GPU 计算利用率。
-- 适配 DeepSeek、Qwen、Llama 等大模型推理优化。
+### 核心特性
 
-### 4. **云原生兼容性**
-- 深度集成 Kubernetes，支持原生 GPU 资源调度。
-- 可无缝对接 PyTorch、TensorFlow 等 AI 训练推理框架。
+* 面向国产芯片的全面兼容适配能力；
+* 支持大模型的训练与推理全流程管理；
+* 支持 GPU、vGPU、昇腾、VPU、NPU 等异构计算资源；
+* 多租户精细隔离与弹性资源调度能力；
+* 实时可观测性、碎片整理与高可用支持；
+* 边云协同的混合部署能力；
+* 与 HAMi 开源生态深度融合与双向增强。
 
-### 5. **可视化 WebUI 管理**
-- 现代化 WebUI，支持 GPU 资源监控、任务管理、调度策略配置等。[HAMi WebUI](https://github.com/Project-HAMi/HAMi-WebUI)
-- 直观展现 GPU 计算池的运行情况，简化运维管理，提高效率。
 
-### 6. **开放社区与生态合作**
-- 由 [睿思智联](https://www.theriseunion.com/)、第四范式、华为、道客等企业共同推动。
-- 吸引多家 AI 计算与芯片企业加入，推动 AI 计算基础设施标准化。
-- 作为 CNCF 孵化项目，HAMi 积极构建开源生态，促进企业级 AI 计算资源管理的发展。
-
-# **加入 HAMi 社区**
-HAMi 作为开源项目，欢迎所有开发者、研究人员和企业共同参与，共同构建更高效的 AI 计算调度生态。
-
-### 贡献方式：
-- **代码贡献**：提交 Pull Request，为 HAMi 增强功能或修复问题。
-- **技术讨论**：在 [GitHub Issues](https://github.com/Project-HAMi/HAMi/issues) 发表建议或反馈。
-- **文档完善**：改进 HAMi 文档，使更多开发者能够快速上手。
-- **社区合作**：探索 AI 计算资源管理的更多可能性。
-
-欢迎访问 [HAMi GitHub](https://github.com/Project-HAMi) 获取更多信息！
+睿思智联致力于服务金融、电信、能源、制造、政务等 AI 驱动型行业，帮助客户高效、灵活、安全地部署和运营大模型，加速 AI 基础设施现代化升级。
