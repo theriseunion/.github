@@ -27,10 +27,9 @@ RiseUnion actively promotes vGPU in enterprise environments, contributes to its 
 
 ### Key Features
 
-- Full-stack support for both training and inference of large AI models  
+- Full-stack support for both training and inference of large AI models 
 - Heterogeneous compute support: GPU, vGPU, Ascend, VPU, NPU  
 - Multi-tenant elastic resource scheduling with fine-grained isolation  
-- Cross-cluster, multi-region scheduling and task migration  
 - Real-time observability, resource fragmentation reduction, and HA support  
 - Seamless edge-cloud collaborative deployment  
 - Deep integration with and contributions to the HAMi open-source ecosystem  
