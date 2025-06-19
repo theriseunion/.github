@@ -1,58 +1,41 @@
 **English** | [中文](https://github.com/theriseunion/.github/blob/main/profile/README_zh.md)
 
-## RiseUnion
+## RiseUnion: AI-Native Platform for Unified Intelligent Compute Resource Management
 
-[**RiseUnion**](https://www.theriseunion.com/)  (Beijing RiseUnion Technology Co., Ltd.)is dedicated to building an efficient and flexible AI heterogeneous computing management platform. We provide enterprises with GPU and AI compute resource pooling, scheduling, and optimization solutions to maximize resource utilization, reduce compute costs, and accelerate the growth of China's AI ecosystem.
+**[RiseUnion](https://www.theriseunion.com/)** builds a full-stack AI-native infrastructure platform for managing large-scale heterogeneous compute and model workflows. Our system unifies the virtualization, scheduling, and intelligent orchestration of multi-vendor, cross-cluster GPU and AI compute resources.
 
-## Project HAMi
-<img src="https://github.com/Project-HAMi/HAMi/raw/master/imgs/hami-horizontal-colordark.png" width="600px">
+### Core Modules
 
-HAMi is an open-source, cloud-native AI compute management project, officially a sandbox and [landscape](https://landscape.cncf.io/?item=orchestration-management--scheduling-orchestration--hami) project of  
-[Cloud Native Computing Foundation](https://cncf.io/)(CNCF), 
-[CNAI Landscape project](https://landscape.cncf.io/?group=cnai&item=cnai--general-orchestration--hami).
+- **[Rise CAMP](https://www.theriseunion.com/product/camp.html)**  
+  Unified model service management platform supporting both inference and distributed training. CAMP enables fast onboarding of diverse models and engines (vLLM, TGI, SGLang, MindIE, etc.), and provides fine-grained control for versioning, A/B testing, traffic routing, and multi-backend dispatch. Features include model marketplace, automatic GPU allocation, and elastic scheduling for inference & training tasks.
 
-It is designed to enable **efficient AI compute orchestration and intelligent scheduling**, leveraging the CNCF ecosystem for deeper integration with Kubernetes and containerized computing platforms.
+- **[Rise VAST](https://www.theriseunion.com/product/vast.html)**  
+  A robust GPU virtualization and adaptive scheduling layer that supports fine-grained resource slicing, compute/memory oversubscription, and dynamic migration. Compatible with both domestic and international accelerators (NVIDIA, Ascend, MLU, DCU, etc.), VAST enables GPU pooling across clusters and tenants using vGPU, MIG, or passthrough modes. Features include resource defragmentation, compute reuse, and hot release.
 
+- **[Rise ModelX](https://www.theriseunion.com/product/modelx.html)**  
+  A dedicated ModelOps platform focused on deployment, management, service provisioning, and lifecycle operations of AI models. It supports integration with CAMP and VAST, enabling unified model-to-resource mapping, automated publishing, routing policies, service monitoring, and intelligent scaling across hybrid environments.
 
-As a core contributor to the [HAMi open-source community](https://github.com/Project-HAMi), RiseUnion is actively advancing HAMi to establish an open and flexible heterogeneous AI compute virtualization middleware. HAMi supports a wide range of domestic and international AI accelerators, delivering high-performance virtualization and intelligent resource scheduling capabilities.
-
-## **HAMi Key Features**
-
-### 1. Heterogeneous GPU Resource Pooling
-- Supports **NVIDIA GPUs** and domestic AI accelerators such as **Ascend, Metax, Iluvatar, Cambricon, Hygon, and Mthreads**.
-- Provides Virtual GPU (vGPU) and Multi-Instance GPU (MIG) support to enable efficient compute resource management.
-
-### 2. Cross-Architecture Unified Scheduling
-- Compatible with x86 and ARM server architectures.
-- Distributed scheduling framework for large-scale GPU workload management.
-
-### 3. Intelligent Compute Scheduling & Optimization
-- Implements priority-based scheduling, preemptive task allocation, and dynamic scaling.
-- Leverages time-slice to maximize GPU utilization.
-- Optimized for inference workloads, supporting **DeepSeek, Qwen, Llama**, and other large models.
-
-### 4. Cloud-Native Integration
-- Fully Kubernetes-native, enabling seamless GPU workload scheduling within K8s clusters.
-- Easily integrates with PyTorch, TensorFlow, and other AI training and inference frameworks.
-
-### 5. WebUI for Compute Management
-- A modern **WebUI** for real-time GPU resource monitoring, workload management, and policy configuration.  
-  Explore [HAMi WebUI](https://github.com/Project-HAMi/HAMi-WebUI).
-- Provides a visualized compute pool overview, simplifying GPU cluster operations.
-
-### 6. Open Community & Ecosystem Collaboration
-- Jointly developed and maintained by **RiseUnion, 4Paradigm, Huawei, DaoCloud**, and other key industry players.
-- Brings together AI compute providers and chip manufacturers to drive standardization of AI compute infrastructure.
-- As a CNCF Incubating Project, HAMi fosters an open ecosystem for enterprise AI compute management.
+- **[Rise MAX](https://www.theriseunion.com/product/camp.html)**  
+  An enterprise-grade, all-in-one solution for AI computing, offering out-of-the-box deployment and reduced AI application development costs.
 
 
-## Join the HAMi Community
-HAMi is an open-source project, and we welcome developers, researchers, and enterprises to contribute and collaborate in building a more efficient AI compute orchestration ecosystem.
+### Open Source
 
-### How to Contribute:  
-- **Code Contributions**: Submit a Pull Request to enhance HAMi's features or fix issues.  
-- **Technical Discussions**: Share feedback and suggestions on [GitHub Issues](https://github.com/Project-HAMi/HAMi/issues).  
-- **Documentation Improvements**: Help improve HAMi's documentation for better adoption.  
-- **Community Collaboration**: Explore new possibilities in AI compute resource management.
+We are also a core contributor and long-term supporter of the [HAMi open-source project](https://github.com/Project-HAMi/HAMi) — formerly known as '[k8s-vGPU-scheduler](https://github.com/4paradigm/k8s-vgpu-scheduler)', is a Heterogeneous device management middleware for Kubernetes. It can manage different types of heterogeneous devices (like GPU, NPU, etc.), share heterogeneous devices among pods, make better scheduling decisions based on topology of devices and scheduling policies.
+RiseUnion actively promotes vGPU in enterprise environments, contributes to its core features (such as vGPU orchestration, scheduling, compute reporting, and node management), and integrates it deeply into our own products for unified GPU lifecycle management.
 
-For more information, visit [HAMi GitHub](https://github.com/Project-HAMi).
+
+### Key Features
+
+- Full-stack support for both training and inference of large AI models  
+- Heterogeneous compute support: GPU, vGPU, Ascend, VPU, NPU  
+- Multi-tenant elastic resource scheduling with fine-grained isolation  
+- Cross-cluster, multi-region scheduling and task migration  
+- Real-time observability, resource fragmentation reduction, and HA support  
+- Seamless edge-cloud collaborative deployment  
+- Deep integration with and contributions to the HAMi open-source ecosystem  
+- Built-in compatibility with domestic compute infrastructures
+
+RiseUnion empowers AI-driven industries—such as finance, energy, telecom, and public sector—to deploy and operate large models efficiently, flexibly, and securely on modern hybrid infrastructures.
+
+
