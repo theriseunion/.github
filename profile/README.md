@@ -1,40 +1,61 @@
 **English** | [中文](https://github.com/theriseunion/.github/blob/main/profile/README_zh.md)
 
-## RiseUnion: AI-Native Platform for Unified Intelligent Compute Resource Management
+  ## RiseUnion: AI Infrastructure Management Platform — From Resource Allocation to Value Delivery
 
-**[RiseUnion](https://www.theriseunion.com/)** builds a full-stack AI-native infrastructure platform for managing large-scale heterogeneous compute and model workflows. Our system unifies the virtualization, scheduling, and intelligent orchestration of multi-vendor, cross-cluster GPU and AI compute resources.
+  **[RiseUnion](https://www.theriseunion.com/)** builds a three-layer, full-stack AI infrastructure management
+  platform. Through unified heterogeneous compute management, intelligent scheduling, and model service delivery, we
+  help enterprises achieve manageable, controllable, and operable AI infrastructure — boosting GPU cluster utilization
+  from 30% to 70%+.
 
-### Core Modules
+  ### Core Modules
 
-- **[Rise CAMP](https://www.theriseunion.com/product/camp.html)**  
-  Unified model service management platform supporting both inference and distributed training. CAMP enables fast onboarding of diverse models and engines (vLLM, TGI, SGLang, MindIE, etc.), and provides fine-grained control for versioning, A/B testing, traffic routing, and multi-backend dispatch. Features include model marketplace, automatic GPU allocation, and elastic scheduling for inference & training tasks.
+  - **[Rise ModelX](https://www.theriseunion.com/product/modelx.html)**
+    A unified training & inference AI service platform covering the full model lifecycle. ModelX integrates data
+  engineering (dataset management, augmentation, cleaning), model fine-tuning (SFT/LoRA/QLoRA), quantization
+  (GPTQ/AWQ/GGUF), automated evaluation (Benchmarks & LLM-as-Judge), model hub with one-click inference deployment, and
+   a built-in AI Gateway for routing, rate limiting, MCP protocol conversion, and multi-model comparison. Supports
+  vLLM, SGLang, MindIE, TensorRT, Xinference engines with dual-dimension resource/Token metering and FinOps cost
+  governance.
 
-- **[Rise VAST](https://www.theriseunion.com/product/vast.html)**  
-  A robust GPU virtualization and adaptive scheduling layer that supports fine-grained resource slicing, compute/memory oversubscription, and dynamic migration. Compatible with both domestic and international accelerators (NVIDIA, Ascend, MLU, DCU, etc.), VAST enables GPU pooling across clusters and tenants using vGPU, MIG, or passthrough modes. Features include resource defragmentation, compute reuse, and hot release.
+  - **[Rise CAMP](https://www.theriseunion.com/product/camp.html)**
+    AI compute scheduling platform — fine-grained slicing, precise scheduling. Features 4-way intelligent scheduling
+  strategies (topology-aware, priority-aware, load-aware, resource-aware), vGPU fine-grained slicing with compute/VRAM
+  overcommit, and domestic chip dynamic partitioning beyond vendor fixed-spec limitations. Includes out-of-box dev
+  environments (Jupyter/VSC), multi-node distributed training with checkpointing, and multi-tenant resource isolation
+  with 4-tier RBAC.
 
-- **[Rise ModelX](https://www.theriseunion.com/product/modelx.html)**  
-  A dedicated ModelOps platform focused on deployment, management, service provisioning, and lifecycle operations of AI models. It supports integration with CAMP and VAST, enabling unified model-to-resource mapping, automated publishing, routing policies, service monitoring, and intelligent scaling across hybrid environments.
+  - **[Rise VAST](https://www.theriseunion.com/product/vast.html)**
+    AI compute management platform — unified collection, full observability. Unifies 10+ chip vendors (NVIDIA, Ascend,
+  Hygon, Cambricon, Iluvatar, KunlunXin, Enflame, MetaX, Moore Threads) through a single scheduling framework with
+  cloud-native zero-intrusion GPU virtualization via Kubernetes Device Plugin. Provides microscope-level full-stack
+  observability (Node → GPU → Task → Model), automatic fault isolation with XID alerting, and an enterprise alert
+  platform with 6-step closed-loop incident management.
 
-- **[Rise MAX](https://www.theriseunion.com/product/camp.html)**  
-  An enterprise-grade, all-in-one solution for AI computing, offering out-of-the-box deployment and reduced AI application development costs.
+  - **[Rise MAX](https://www.theriseunion.com/product/max.html)**
+    AI compute appliance — pre-integrated with the full Rise platform stack (VAST + CAMP + K8s Dashboard + distributed
+  storage), deployable in 15 minutes. Supports x86/ARM multi-architecture with domestic chip certifications, scaling
+  from 3-node clusters to cross-datacenter deployments. Includes one-stop K8s operations and cloud-edge elastic
+  scaling.
 
+  ### Open Source
 
-### Open Source
+  We are a core maintainer of the [HAMi open-source project](https://github.com/Project-HAMi/HAMi) (CNCF Sandbox) —
+  Heterogeneous AI Computing Virtualization Middleware for Kubernetes. HAMi manages heterogeneous devices (GPU, NPU,
+  etc.), enables device sharing among pods, and makes scheduling decisions based on device topology and policies.
+  RiseUnion contributes to HAMi's core features including vGPU orchestration, scheduling, compute reporting, and node
+  management. [Rise VAST is the enterprise edition built on HAMi](https://www.theriseunion.com/product/vast.html).
 
-We are also a core contributor and long-term supporter of the [HAMi open-source project](https://github.com/Project-HAMi/HAMi) — formerly known as '[k8s-vGPU-scheduler](https://github.com/4paradigm/k8s-vgpu-scheduler)', is a Heterogeneous device management middleware for Kubernetes. It can manage different types of heterogeneous devices (like GPU, NPU, etc.), share heterogeneous devices among pods, make better scheduling decisions based on topology of devices and scheduling policies.
-RiseUnion actively promotes vGPU in enterprise environments, contributes to its core features (such as vGPU orchestration, scheduling, compute reporting, and node management), and integrates it deeply into our own products for unified GPU lifecycle management.
+  ### Key Capabilities
 
+  - Unified training & inference lifecycle: data → fine-tuning → quantization → evaluation → deployment
+  - 10+ heterogeneous chip vendors unified under one scheduling framework
+  - 4-way intelligent scheduling: topology, priority, load, and resource aware
+  - Cloud-native zero-intrusion GPU virtualization with hard isolation
+  - Full-stack observability from GPU device layer to model performance
+  - AI Gateway with routing, rate limiting, MCP protocol, and FinOps cost governance
+  - Enterprise-grade alerting, fault auto-isolation, and multi-cluster multi-tenant management
+  - Domestic chip dynamic partitioning beyond vendor fixed-spec limitations
 
-### Key Features
-
-- Full-stack support for both training and inference of large AI models 
-- Heterogeneous compute support: GPU, vGPU, Ascend, VPU, NPU  
-- Multi-tenant elastic resource scheduling with fine-grained isolation  
-- Real-time observability, resource fragmentation reduction, and HA support  
-- Seamless edge-cloud collaborative deployment  
-- Deep integration with and contributions to the HAMi open-source ecosystem  
-- Built-in compatibility with domestic compute infrastructures
-
-RiseUnion empowers AI-driven industries—such as finance, energy, telecom, and public sector—to deploy and operate large models efficiently, flexibly, and securely on modern hybrid infrastructures.
-
-
+  RiseUnion serves benchmark customers including PetroChina, State Grid, and NSCC, with production deployments across
+  finance, energy, manufacturing, retail, and education. As the Group Leader of the AI Compute Pooling Working Group,
+  we led the development of the National Group Standard for Heterogeneous Virtualization and Pooling.
