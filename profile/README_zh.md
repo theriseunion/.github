@@ -1,37 +1,51 @@
 [English](https://github.com/theriseunion/.github/blob/main/profile/README.md) | **中文**
 
-## 睿思智联: AI-Native 的统一智算管理平台
-[北京睿思智联科技有限公司 (RiseUnion)](https://www.theriseunion.com/) 专注于构建高效、灵活的 AI 异构计算管理平台，为企业客户提供 GPU 及其他 AI 计算资源的池化、调度与优化方案。我们致力于提升 AI 计算资源的利用率，降低算力成本，并推动国产 AI 生态的发展。
+## 睿思智联：AI 基础设施管理平台 — 从资源分配到价值交付
 
-### 核心模块
+**[睿思智联](https://www.theriseunion.com/zh/)** 构建三层全栈 AI
+基础设施管理平台。通过异构算力统一纳管、智能调度与模型服务交付，帮助企业实现可管、可控、可运营的 AI 基础设施，GPU
+集群利用率从 30% 提升至 70%+。
 
-* **[Rise CAMP](https://www.theriseunion.com/product/camp.html)**
-  一体化模型服务管理平台，支持大模型的推理服务与分布式训练开发。CAMP 可快速接入多种模型及推理引擎（如 vLLM、TGI、SGLang、MindIE 等），并提供版本控制、A/B 测试、流量路由、多引擎调度等精细化能力，同时支持模型广场、资源自动调度与弹性任务管理。
+### 核心产品
 
-* **[Rise VAST](https://www.theriseunion.com/product/vast.html)**
-  面向多租户和异构环境的 GPU 虚拟化与弹性调度层，支持精细化的算力/显存切分、超分配与动态迁移。兼容 NVIDIA、昇腾、寒武纪、海光等国产与国际加速芯片，支持 vGPU、MIG、passthrough 等多种模式。具备资源碎片整理、算力复用、热释放等高级功能。
+- **[Rise ModelX](https://www.theriseunion.com/zh/product/modelx.html)**
+  训推一体的 AI 服务平台，覆盖模型全生命周期。集成数据工程（数据集管理、增强、清洗）、模型微调（SFT/LoRA/QLoRA）、量
+化（GPTQ/AWQ/GGUF）、自动评测（标准 Benchmark 与 LLM-as-Judge）、模型仓库与一键推理部署，内置 AI
+网关提供路由、限流、MCP 协议转换与多模型效果对比。支持 vLLM、SGLang、MindIE、TensorRT、Xinference
+等主流推理引擎，资源与 Token 双维度计量计费与 FinOps 成本治理。
 
-* **[Rise ModelX](https://www.theriseunion.com/product/modelx.html)**
-  专注于模型部署、管理、服务与运维的 ModelOps 平台。ModelX 与 CAMP 和 VAST 深度集成，实现模型与算力资源的自动映射、服务上线、路由策略下发、实时监控与智能扩缩容，适配多种混合部署环境。
+- **[Rise CAMP](https://www.theriseunion.com/zh/product/camp.html)**
+  AI 算力调度平台 — 切得细、用得准。提供四重智能调度策略（拓扑感知、优先级感知、负载感知、资源感知），vGPU
+细粒度切分与算力/显存超分，国产卡动态切分突破原厂固定规格限制。内置开箱即用开发环境（Jupyter/VSC）、多机多卡分布式训
+练与断点续训，四层级 RBAC 多租户资源隔离。
 
-* **[Rise MAX](https://www.theriseunion.com/product/camp.html)**
-  面向企业的一体化 AI 计算解决方案，提供开箱即用的部署能力，降低 AI 应用研发与落地门槛，加速大模型商业化进程。
+- **[Rise VAST](https://www.theriseunion.com/zh/product/vast.html)**
+  AI 算力管理平台 — 聚得全、算得明。通过统一调度框架纳管 10+
+芯片厂商（NVIDIA、昇腾、海光、寒武纪、天数智芯、昆仑芯、燧原、沐曦、摩尔线程），基于 Kubernetes Device Plugin
+的云原生零侵入 GPU 虚拟化。提供显微镜级全链路可观测（节点→卡→任务→模型）、XID 故障码自动隔离，以及 6
+步闭环企业级告警平台。
 
-### 开源生态
+- **[Rise MAX](https://www.theriseunion.com/zh/product/max.html)**
+  AI 算力一体机 — 预集成全栈 Rise 平台（VAST + CAMP + K8s Dashboard + 分布式存储），15 分钟完成部署。支持 x86/ARM
+多架构与国产信创兼容认证，从 3 节点小集群到跨数据中心大规模部署平滑扩展，内置一站式 K8s 运维与云边协同弹性扩展。
 
-我们是 [HAMi 开源项目](https://github.com/Project-HAMi/HAMi) 的核心贡献者和长期支持者。HAMi（原名 [k8s-vGPU-scheduler](https://github.com/4paradigm/k8s-vgpu-scheduler)）是 Kubernetes 上的异构设备管理中间件，可用于统一调度 GPU、NPU 等多种设备，支持设备共享、拓扑感知调度与自定义策略扩展。
+### 开源贡献
 
-睿思智联在企业场景中积极推广 vGPU 技术，持续贡献包括 vGPU 编排、算力调度、设备上报、节点管理等核心功能，并在自身产品中深度集成 HAMi，实现 GPU 生命周期的统一管理与调度优化。
+我们是 [HAMi 开源项目](https://github.com/Project-HAMi/HAMi)（CNCF Sandbox）的核心维护者。HAMi 是 Kubernetes 异构 AI
+算力虚拟化中间件，支持 GPU、NPU 等异构设备的共享、切分与基于拓扑的智能调度。睿思智联持续贡献 HAMi 核心特性，包括 vGPU
+ 编排、调度策略、算力上报与节点管理。[Rise VAST 是在 HAMi
+开源版基础上开发的企业版](https://www.theriseunion.com/zh/product/vast.html)。
 
-### 核心特性
+### 核心能力
 
-* 面向国产芯片的全面兼容适配能力；
-* 支持大模型的训练与推理全流程管理；
-* 支持 GPU、vGPU、昇腾、VPU、NPU 等异构计算资源；
-* 多租户精细隔离与弹性资源调度能力；
-* 实时可观测性、碎片整理与高可用支持；
-* 边云协同的混合部署能力；
-* 与 HAMi 开源生态深度融合与双向增强。
+- 训推一体全生命周期：数据 → 微调 → 量化 → 评测 → 部署
+- 10+ 异构芯片厂商统一调度框架
+- 四重智能调度：拓扑、优先级、负载、资源感知
+- 云原生零侵入 GPU 虚拟化与硬隔离
+- 全链路可观测：从 GPU 设备层到模型性能层
+- AI 网关：路由、限流、MCP 协议与 FinOps 成本治理
+- 企业级告警、故障自动隔离与多集群多租户管理
+- 国产卡动态切分突破原厂固定规格限制
 
-
-睿思智联致力于服务金融、电信、能源、制造、政务等 AI 驱动型行业，帮助客户高效、灵活、安全地部署和运营大模型，加速 AI 基础设施现代化升级。
+睿思智联已服务中石油、国家电网、济南超算等标杆客户，在金融、能源、制造、零售、教育等行业落地大规模生产级实践。作为工
+委会 AI 算力池化工作组组长单位，主导起草了《异构算力虚拟化及池化系统要求》团体标准。
